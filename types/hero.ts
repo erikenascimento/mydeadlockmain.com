@@ -7,5 +7,5 @@ export interface Hero {
   id: HeroId
   name: string
   description: string[]
-  tags: string[3]
+  tags: [string, string, string]
 }
