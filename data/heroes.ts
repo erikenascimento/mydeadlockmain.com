@@ -1,24 +1,524 @@
-import { Hero } from "@/types/hero"
+import { Ihero } from "@/interfaces/Ihero"
 
-export const HEROES: Hero[] = [
+export const heroes: Ihero[] = [
   {
-    id: "abrams",
-    name: "Abrams",
-    description: ["Hard hitting, hard headed, and hard drinking; Detective Abrams has been a fixture on the New York investigating scene for years. From stolen art, to missing persons, to ritual murders; Abrams didn't just take any case that came across his desk... he solved them.","But his days of following cheating spouses came to an end the day he opened his office door and found The Tome sitting on his desk.", "No instruction was left for him save for a brief note scrawled in onyx blood that read \"Don't let them have it\" Abrams hasn't figured where the thing came from; but seeing as his home has been broken into, his office tossed on 3 different occasions, and his car firebombed he has a vested interest in figuring out what the hell is going on."],
-    tags: ["Tank", "Brawler", "Bull-Headed"],
+    "id": 1,
+    "name": "Infernus",
+    "description": "Like most teenagers; Infernus was wild, rebellious, and impetuous.  Unlike most teenagers, Infernus was a creature from another plane and had a supernatural mastery over fire.  Needless to say:  his youth was filled with no small amount of arson, murder, and evidence disposal.  But that was then.  Now an adult, Infernus has mellowed out considerably.  He’s happy working at a bar with good live music, and talking to interesting people.  That being said when someone at the bar gets belligerent or violent, he’s not afraid to dust off the skills he once honed.",
+    "tags": [
+      "Arsonist",
+      "Explosive",
+      "Burn Rubber"
+    ]
   },
   {
-    id: "apollo",
-    name: "Apollo",
-    description: ["A land of beauty, tradition and conflict; North Ixia is no stranger to brutal political violence. So when Apollo was told that it was for his own safety he was being sent to New York for school, he knew the situation was serious.", "Adjusting to life at Blackmore Academy didn’t come easy to Apollo. His school was supposed to be filled with The Cursed Apple’s best and brightest but all he saw, with few exceptions, was a sea of aggressive mediocrity. Electing not to waste his time with frivolous things like parties and dances, he instead put his energy on the piste, where he rigorously trains as captain of the Blackmore fencing team.", "However, at the end of the day Apollo does not fret too much on the tedium of life in New York. He knows that eventually the time will come when his father will call on him to come home and he will get to show that he is worthy of wielding his family's ancestral blade."],
-    tags: ["Finesse", "Mobility", "A Cut Above"],
+    "id": 2,
+    "name": "Seven",
+    "description": "When mystic energy awoke on Earth, the world changed... anything was possible.  But just because anything WAS possible, didn’t mean that anything SHOULD be possible.  And so the government made rules.   Laws.  A means for US citizens to enjoy the benefits of the supernatural world in safety.  But rules and laws are for lesser men.  Men with limitations.  Men who were not Seven.  \n\nThere are many rumors about what Seven did to land himself in Lost Whisper, an oubliette for the most dangerous of occultists.  But there is no doubt about what happened on the night of his execution. \n\nWards placed by the most powerful ritualists of 7 different nations… wards designed to not just prevent mystical interference with the execution, but to simultaneously obliterate Seven's soul so that it could never be contacted, resurrected, or otherwise be used by someone looking to follow in his footsteps... failed.\n\nOnlookers viewed in horror as the strongest mentalist employed by the US Army’s head popped like a grape.  They screamed as Scotland Yard’s premiere occult investigator, the one who allegedly captured Seven, crumbled to ash.  Seven's body buckled and writhed against his restraints; his skin burning from eldritch electricity... and yet he would not die.  He laughed.\n\nHe laughed as he tore himself free from his bondage.\n\nHe laughed as his captors cowered in fear.\n\nHe laughed as he massacred his tormentors.\n\nHe laughed as he tasted the fresh air that was denied to him for years.\n\nAnd he laughed when he thought about what he was going to do once he reached New York City.",
+    "tags": [
+      "High Voltage",
+      "Merciless",
+      "Area Denial"
+    ]
   },
-  /*
   {
-    id: "",
-    name: "",
-    description: ["", "", ""],
-    tags: ["", "", ""],
+    "id": 3,
+    "name": "Vindicta",
+    "description": "A victim of John Hathorne during the Salem Witch Trials, Vindicta got a second chance of life when her spirit was brought back to the mortal plane during the first Maelstrom (the event that introduced the supernatural to the public at large).\n\nWaging a one ghost war against \"The Friends of Humanity\", a neo inquisition formed by Hathorne's descendants; Vindicta looks to keep the supernatural safe from Hathorne's ilk, and she isn't afraid to stack as many bodies as needed to do it.",
+    "tags": [
+      "Sniper",
+      "Soaring",
+      "One Shot Kill"
+    ]
   },
-  */
+  {
+    "id": 4,
+    "name": "Lady Geist",
+    "description": "Once, Lady Jeanne Geist was the toast of the town.  But as time passed and her beauty faded she found herself further and further from her glory days in High Society until finally she was nothing more than a frail woman in a nursing home, telling stories of a glorious past.  And that’s when Oathkeeper revealed himself.  A powerful spirit from another plane, Oathkeeper offered her a path to reclaim her past glories… he could restore her youth; all she had to do was drain the essence of the living to sustain herself. \n\nGeist was torn.  Obviously murder was ghoulish business, and undoubtedly Oathkeeper was not an entity that could be trusted… but still, the thought of having a second chance of reliving her youth was too good to pass up.  And so she concocted a plan: after making a pact with Oathkeeper she would bind and ward him, limiting his influence and pull over her.  Oathkeeper would still get fed; but on her terms, not his.\n\nHowever, as years have turned to decades; the strength of the Ward has weakened, and Oathkeeper hungers more than he ever has in the past… ",
+    "tags": [
+      "Lifesteal",
+      "Self Damage",
+      "Fatale"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Abrams",
+    "description": "Hard hitting, hard headed, and hard drinking; Detective Abrams has been a fixture on the New York investigating scene for years.  From stolen art, to missing persons, to ritual murders; Abrams didn't just take any case that came across his desk... he solved them.\n\nBut his days of following cheating spouses came to an end the day he opened his office door and found The Tome sitting on his desk.\n\nNo instruction was left for him save for a brief note scrawled in onyx blood that read \"Don't let them have it\".  Abrams hasn't figured where the thing came from; but seeing as his home has been broken into, his office tossed on 3 different occasions, and his car firebombed he has a vested interest in figuring out what the hell is going on.",
+    "tags": [
+      "Tank",
+      "Brawler",
+      "Bull-Headed"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Wraith",
+    "description": "The cornerstone of the New York gambling scene, Wraith's organization is about as open a secret as it comes.  However, thanks to a non-trivial amount of bribes, shakedowns, and blackmail, Wraith knows that she's above the law.",
+    "tags": [
+      "Duelist",
+      "Isolator",
+      "Telekinetic"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "McGinnis",
+    "description": "Maggie McGinnis always had a knack for building things.  At 4 she was using Lincoln Logs to recreate architectural marvels.  At 10 she built and rewired a custom light fixture for her parent's anniversary.  At 15 she designed a machine that refined the souls of the dead...that last one got a little more attention than the Lincoln Logs.\n\nNow the head of Fairfax Industries Military R&D department, McGinnis spends her time in the machine shop, not in a lab.  She's not interested in theory, to her science is magic you can touch.",
+    "tags": [
+      "Inventor",
+      "Support",
+      "Disruption"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Paradox",
+    "description": "Paradox.  An artifact of time, and the name of a notorious thieves' guild... one that prides themselves on constructing elaborate heists that target the most untouchable of individuals and institutions.  What does Paradox do with the countless artifacts, state secrets, and celebrity paternity tests that they have stolen?  Put it on display at pop-up museums, so that they can show the world that no one is out of Paradox’s reach.\n\nShrouded in mystery, each member of Paradox dons a mask and takes on the organization's name.  They are everywhere.  They are nowhere.  And if they want something, they are inevitable.",
+    "tags": [
+      "Calculated",
+      "Disruptor",
+      "Tactician"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Dynamo",
+    "description": "As a Scientist, Professor Dynamo always had an inquisitive mind.  So when a rift in space and time opened up in central park he was first on the scene to investigate – and while he expected such a majestic sight to be life changing, he was thinking more in a metaphorical way as opposed to having his body atomized and reduced to a tiny dying star.\n\nBut while his body is gone, his spirit and lust for knowledge lives on.  A tenured professor at Columbia College, Dynamo looks to learn more about his condition while maintaining his class load, after all: he has future minds to inspire.",
+    "tags": [
+      "Teamplay",
+      "Initiator",
+      "Clutch"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Kelvin",
+    "description": "A famed adventuring scientist, Kelvin made it his life's mission to explore and understand the unknowable.  So naturally when rumors surfaced regarding an 8th astral gate hidden in the arctic, Kelvin couldn't build an expedition team fast enough.  Assembling the brightest minds of his generation, Kelvin and his team set forth with much fanfare.\n\nThey never returned.\n\nA year and a half later the frozen body of Kelvin was found by a fishing trawler, his corpse clutching a rock etched with glowing runes.  The crew chipped away at the ice, looking to get a closer look at the body and were shocked when Kelvin opened his eyes.  They checked his vitals... there was no pulse.  They sought to bandage his open wounds... there was no blood.  And yet, impossibly, Kelvin was \"alive\".\n\nHaving no memory of what happened on the expedition, Kelvin is looking for answers.",
+    "tags": [
+      "Protector",
+      "Explorer",
+      "Ice Cold"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Haze",
+    "description": "The Occult Security and Investigation Commission is a black box government organization that makes the CIA look transparent.  It falls on the men, women, and entities of the OSIC to keep the country safe from sinister forces that are beyond the capabilities of local law enforcement.\n\nAs a member of the notorious Sandman Division, Haze is routinely tasked with infiltrating the dreams of persons of interest, to assess their threat level, and if needed... to put them to sleep.",
+    "tags": [
+      "Assassin",
+      "Stealthy",
+      "Lethal"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Holliday",
+    "description": "There are people who spent their whole lives dreaming about moving to New York.  Holliday isn't one of those people.  Content with being a Sheriff in a small town, Holliday enjoyed a career where the only time she had to use her gun was when trick shooting at the county fair...then the murders started.\n\nGrisly and inhumane; the bodies were found with their ribcages ripped open... their innards picked apart as if by birds.  Holliday tracked down the killer, a travelling folk musician that the media dubbed \"The Troubadour\", but when she confronted him he exploded into a murder of crows and flew away.\n\nThat was 6 months ago, and while the murders in central Illinois have stopped, Holliday's investigation has not.  She believes that The Troubadour is travelling to New York, and when she finds him she's going to kill that evil son of a bitch.",
+    "tags": [
+      "Crackshot",
+      "Explosive",
+      "Apprehender"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Bebop",
+    "description": "Forged by the hands of a widowed junk yard attendant; Bebop was more than just some scrap golem laborer... he was the son she couldn't have.  Together they would work in the iron yard during the day, and listen to jazz at night. It was a predictable, if not comforting routine.  But now, Bebop's creator has fallen ill and while Miss Shelly wouldn't approve of the activities that Bebop does at night to pay for her medicine, what she doesn't know can't hurt her.",
+    "tags": [
+      "Hook",
+      "Bomb",
+      "Punch"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Calico",
+    "description": "Once a decorated member of The Baxter Society, Calico left the august order once she realized that killing monsters for free was less profitable than killing people for money.\n\nNow an in demand contract killer, Calico is living her best life ending someone else's.",
+    "tags": [
+      "Tricksy",
+      "Slippery",
+      "Burst Damage"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Grey Talon",
+    "description": "A founding member of \"The Baxter Society\", Wesley Grey Talon spent close to 40 years hunting monsters that preyed on man before finally deciding to find a replacement and lay down his bow. Grey Talon's duties had meant that he never spent much time with his wife and kid, and now that his son had started a family of his own he realized that this was his last chance to reconnect with the people he loved.\n\nRetirement suited Wesley.  He made up for lost time with his wife.  He doted on his grandkids.  He cooked dinner for the whole family every Wednesday.  He was happy.\n\nThen he got the call.\n\nThe authorities claimed that it was a freak accident... that the fire consumed his son's house before anyone got a chance to escape.  But Wesley knew better.  His son's wife was an Ixian who could snuff out flame with a thought.  If their bodies were found burned they had to be dead long before there was a fire.\n\nAnd so Grey Talon has picked up his bow once more, and when he finds who's responsible there will be a bloody reckoning.",
+    "tags": [
+      "Precision",
+      "Hunter",
+      "Area Denial"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Mo & Krill",
+    "description": "Mo and Krill are members of The Tunnel Rats, a group that help facilitate illicit trade and commerce between the boroughs thanks to a network of underground tunnels.  But while most denizens of the New York underworld respect the work The Rats do, every once in a while a gang tries to exploit the tunnel system for personal vendettas...that's when Mo and Krill step in and remind the city what happens to those who disrespect their hospitality.",
+    "tags": [
+      "Tag-Team",
+      "Initiator",
+      "Burrower"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Shiv",
+    "description": "A loyal member of \"The Baxter Society\", an international order of monster hunters, Shiv travels across North America looking to put down creatures that prey on the living.\n\nWhile his less polished nature and criminal past make some of the more traditional members of the Society wary, no one can deny his effectiveness.",
+    "tags": [
+      "Rage",
+      "Bleed",
+      "Repeat"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Ivy",
+    "description": "The gargoyle didn't know what was happening when it sprang to life...  just that a big human and a small human were being hurt.  And so the gargoyle leapt to action, sending the attackers fleeing in horror.  The small human said thank you and asked the gargoyle's name.  The gargoyle didn't have one.  And so the small human said, \"I'm going to call you Ivy.\"  The gargoyle, being covered in ivy at the time, thought it was a bit obvious, but decided to go along with it for the small human's sake.\n\nThe humans asked if Ivy would come home with them so they could show their appreciation, and so Ivy walked with them.  That night she learned much.  The family were called The Arroyo's.  The little one, Sophia.  Mofongo is what they called a plate of deliciousness.  But most importantly, she learned that the people attacking them were called \"The Mendoza Syndicate\", and they were hurting people...nice people like The Arroyo's.\n\n18 years have passed since the day the Arroyo's took Ivy home... and during that time she made it her mission to dismantle the Mendoza Syndicate and free Spanish Harlem from its grasp.  However the thing about dedicating your life to a single pursuit for nearly 2 decades is that you don't really know what to do once you achieve it.  For the first time in her life, Ivy is prepared to venture outside of Spanish Harlem and see what the world has to offer beyond vigilante justice.",
+    "tags": [
+      "Team-up",
+      "Disruptor",
+      "Rock Solid"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Kali",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 25,
+    "name": "Warden",
+    "description": "Most people think the supernatural came into the world 50 years ago.  They’re wrong.  Its presence shaped folklore for generations… and as long as there have been people afraid of the shadows, there have been those who dedicated their lives to fighting in them.\n\nComing from a lineage of militant alchemists, Warden’s family always trained for the day they would have to stave off a mystic apocalypse… but as time passed the importance of the lessons seemed less and less important.  What once was viewed as a sincere warning slowly morphed into being perceived as amusing anecdotes told by their superstitious grandparents.\n\nWhen the portal opened in Central Park, Warden’s parents realized not only was everything they were told was true, they were unprepared.  Refusing to let the next generation fall asleep on the job, Warden was trained since birth to be a supernatural killing machine with one purpose: stopping the Patrons from ever entering our world.",
+    "tags": [
+      "Initiator",
+      "Fearless",
+      "One Man Army"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Yamato",
+    "description": "犯罪組織のボスの家に生まれた花桜梨とその兄の大和にとって、\n父の死後に「セブンスムーン」の跡目を継ぐのは自明のことでもあった。\nそして何年もの間、かれらは対等の立場で組織を率いて利益と成功を\nもたらし、やがてはアメリカへの進出をも目論むようになった。\n\n思い描いていた計画は単純で、 大和がアメリカに渡って花桜梨の\n国際的な存在感を高め、その間花桜梨は日本に残って国内を統制する、\nといったものだった。 兄妹にとって不運だったのは、花桜梨が日本で\n指揮をとるという計画を快く思わない部下たちがいたことだった。\n\nそして迅速かつ暴力的な形で、反乱は発生した。大和は花桜梨を\n守るために命を落とし、花桜梨と数人の忠実な部下たちは、\nその大和の犠牲のおかげもあって、日本からアメリカへと\n逃げ延びることに成功した。\n\nアメリカに着いた花桜梨たちを出迎えたのは、本来であれば大和が\n会う予定となっていた男であった。彼は日本人の名前になじみが\nなかったため性別の区別がついておらず、花桜梨のことを\n「ヤマト」と呼んだ。花桜梨は男の間違いを正そうと思ったが、\n結局そのままにした。兄の記憶を残し続けるためにも、その名を名乗り、\nその夢を受け継ぐことが最善の道であろうと考えたからだ。",
+    "tags": [
+      "Relentless",
+      "Acrobatics",
+      "Pursuer"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Lash",
+    "description": "Jacob Lash is an asshole.",
+    "tags": [
+      "Initiator",
+      "High Flying",
+      "Arrogant"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Viscous",
+    "description": "The Bermuda Triangle was never a myth, it was a shadowline nexus deep underneath the Atlantic Ocean.  For the most part, the things that escaped this astral gate were benign (like Nessie), but now something dark and predatory known only as The Adversary hunts the seas... and ocean denizens are scared to death.\n\nOne of those inhabitants, a psychic sea anemone, wants to do something about it.  Summoning an ectoplasmic goo body to traverse the surface, Viscous is desperately trying to summon the Patrons in order to keep The Deep safe from the horror that lurks below.",
+    "tags": [
+      "Evasive",
+      "Disruptor",
+      "Gooey"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Gunslinger",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 39,
+    "name": "The Boss",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 47,
+    "name": "Tokamak",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 48,
+    "name": "Wrecker",
+    "description": "When the Maelstrom  first hit New York, it didn’t just usher in a new age of mysticism to the world… it changed geopolitics.  From CIA employed seers identifying threats decades before they rise to power to occult pacts made in smoky backrooms;  countless wars and atrocities have been prevented that would otherwise have shaped history.  But that doesn’t mean there is no war… just that war has changed.\n\nParanormal Military Companies have risen to prominence.  These groups, using a combination of extra-planar creatures and various blood magics; have found ways to circumvent the guardrails established by the nation’s watchdog oracles, allowing them to function as proxies for nations seeking to wage war.\n\nWrecker is one such soldier.\n\nEmployed by Eldritch Tactical Solutions (a subsidiary of Fairfax Industries), Wrecker is an elite soldier of fortune with a reputation for doing dirty work that other PMC’s don’t have the stomach for.",
+    "tags": []
+  },
+  {
+    "id": 49,
+    "name": "Rutger",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 50,
+    "name": "Pocket",
+    "description": "Arin Fairfax, the eldest heir to Fairfax Industries, has been living in hiding for the past 5 years after being shot and left for dead on their 18th birthday.  Arin doesn't know who is trying to keep them from taking control of their parent's company... but in the avarice fueled viper's nest that is Fairfax Industries it could be anyone.\n\nTaking on the name \"Pocket\", Arin desperately wants to keep their true identity a secret… not only for their own protection; but because they want to forge their own identity separate from their parents.",
+    "tags": [
+      "Trickster",
+      "Burst Damage",
+      "Frogs"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Thumper",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 52,
+    "name": "Mirage",
+    "description": "The Djinn are one of the more curious groups of people in the modern world.  Possessing great power in controlled doses, Djinn are incapable of maintaining corporeal form for longer than 48 minutes without resting within a vessel.  As a result, most Djinn employ human bodyguards for transport, protection, and companionship.\n\nMirage is one such bodyguard.  Employed by Djinn ambassador Nashala Dion, Mirage is in New York on a diplomatic mission.  It's the hope of the Djinn that they can negotiate with the US government for a sale of part of Wyoming so that they can build a sovereign nation for their people.",
+    "tags": [
+      "Bodyguard",
+      "Traveller",
+      "Focused"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Fathom",
+    "description": "A notorious monster of The Deep, Fathom enjoyed cultivating an aura of mystery and fear around him.  He was content feasting on wayward sailors and demanding tithes from selkies, but then The Adversary came and ruined everything.  After all, when it came to sowing terror, how could he compete with a genocidal force of nature?  It wasn't fair.  Something had to be done to save himself from fading into obscurity...and so he seeks to summon the Patrons to ensure that he will always be the apex predator of The Deep.",
+    "tags": []
+  },
+  {
+    "id": 54,
+    "name": "Cadence",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 56,
+    "name": "Bomber",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 57,
+    "name": "Shield Guy",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 58,
+    "name": "Vyper",
+    "description": "When it comes to breaking the law, not getting caught is a pretty important part of the job.  Vyper never got that memo.  Luckily for her, if there’s one thing she’s better at than being arrested, it’s escaping out of jail.\n\nHaving done time in every major prison in the tri-state area, Vyper has built an impressive network of street level lowlifes that owe her one.  She’s also built an impressive network of street level lowlifes that want her dead, but she tries to focus on the positive.",
+    "tags": [
+      "Gunner",
+      "Slippery",
+      "Rat-a-Tat"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Vandal",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 60,
+    "name": "Sinclair",
+    "description": "Henry's parents told him he was too young and impulsive to mess with real magic, and so they gave him a deck of cards to play with.  He took to sleight of hand naturally and soon was dazzling his classmates with fantastic feats of illusions that were done without mystic artifacts or incantation.\n\nWhen he was in high school he met Savannah, and their mutual love of stage magic sparked a whirlwind romance.  Soon they fell in love and created an act together.  Obviously they were meant to be; and so at prom, Henry proposed to Savannah and they married soon after graduation.\n\nUnsurprisingly both sets of parents were not thrilled at this prospect, but Henry and Savannah knew they were soulmates.  And so they cemented their love for one another by having a blood mystic bind their souls for eternity.\n\nWhen an on-stage accident claimed both their lives, no one was sure who to blame.  Henry claims Savannah was out of position.  Savannah says Henry didn't wait for his cue.  But one thing's for sure, since their souls are tied to each other neither one of them have been able to move on.  Now a bickering pair of ghosts, Henry and Savannah need to work together if they want to have any chance of undoing their eternal union.",
+    "tags": [
+      "Trickster",
+      "Copycat",
+      "Versatile"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Trapper",
+    "description": "An employee of the New York Municipal Coven; Trapper spends his days building Spirit Urns, luring giant rats, and capturing various invasive species from The Outer Planes.  It's not a particularly glamorous job, and he really hates working with spiders, but those Knickerbocker season tickets don't pay for themselves.",
+    "tags": []
+  },
+  {
+    "id": 62,
+    "name": "Raven",
+    "description": "Led by the specter of Catherine the Great, the Soviet Empire has flourished in a brave new world of mysticism.  But while her deeper motivations are often obfuscated from the world stage, one thing is for certain: she hates being a ghost.  To this end she has tasked The Empire’s spymaster with one goal: find a way to make her corporeal once more.\n\nRelentless in pursuit of his task; the operative known only as \"The Raven\" has scoured the Earth looking for strange artifacts, apocryphal writings, and wisdom of the life beyond. Now in New York, Raven looks to find a way to tether Catherine’s spirit to the mortal coil.",
+    "tags": []
+  },
+  {
+    "id": 63,
+    "name": "Mina",
+    "description": "Mina Ha had it all...rich parents, elite education, and an arranged marriage that would see her ascend from run-of-the-mill upper class to American royalty.  She was happy.\n\nThen her betrothed was assassinated.\n\nMina wept; not for the life of her fiancé, but for the future that was stolen from her.  Why couldn’t the killer just wait until after the wedding? Then she’d have the last name she always dreamed of and no one would even have to pretend to love anyone.  It could have been perfect, but life wasn’t fair...and so Mina did what she always does when things don’t go her way: she told her parents to fix it.\n\nMr. And Mrs. Ha knew that the only way to appease their daughter was to offer her something greater than what she lost... and marrying into one of the world’s most lauded families was a tall order to top.  They had to think big.  They had to think outside of the box.  They had to promise their daughter immortality.\n\nIt took a small fortune, but eventually they found a vampire who was willing to turn her.  Unsurprisingly, Mina thought the idea of eternal youth and a trust fund was an acceptable plan B and happily agreed to the proposal.  Now a fledgling vampire, Mina is quickly discovering that the clout she held as a human has no weight in vampire high society...and while at first that annoyed her, if there is one thing Mina has a knack for, it's learning the rules so she can subvert them.  She will be the Viscount of New York, the other vampires just don't know it yet.",
+    "tags": [
+      "Harasser",
+      "Nimble",
+      "Vexing"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Drifter",
+    "description": "An ancient vampire roaming across America, the nameless monstrosity known as The Drifter has been preying on the living for generations.\n\nUnlike most vampires, Drifter doesn’t value finery or titles and has naked contempt for vampiric laws and tradition.  This refusal to toe the line has made him a marked man all over the North American Baronies; but while Viscounts and Elders cry for his execution, Drifter continues to do what he pleases...",
+    "tags": [
+      "Stalker",
+      "Bloodthirsty",
+      "Cruel"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Venator",
+    "description": "The Venators of St. Benedict are a Vatican-sanctioned order whose members are deployed to regions with a high concentration of supernatural predators.   Few in number, their modus operandi is to observe, identify, and exterminate. They are methodical, they are precise, and once they identify a threat to the flock they are relentless.\n\nBut even amongst those who are called The Sword Of St. Benedict, one stands apart from the others.  A man whose hardened heart has allowed him to pay terrible prices in the name of the greater good... and he has once again been dispatched to New York.",
+    "tags": [
+      "Devout",
+      "Arms Expert",
+      "Tactical"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Victor",
+    "description": "A lot of people spend their whole lives wondering who they really are. For Victor, this existential question is made more complicated as he woke up on a mortuary table with no knowledge of his creator, why he was made, and whom he is made of.\n\nNow searching the five boroughs for answers, Victor is hoping to find someone who can identify any part of him.",
+    "tags": [
+      "You",
+      "Can't",
+      "Kill Me"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Paige",
+    "description": "The daughter of a rare book dealer, Paige grew up in a loving home that prioritized kindness, magic, and storytelling.  But while Paige took naturally to her parents' values, her little brother Bryce did not.\n\nA rebellious teen, Bryce resented not only his family’s saccharine attitude, but also their refusal to let him dabble in magics that they deemed too dangerous.  Paige tried everything she could think of to keep him out of trouble, but like most teenagers, the more his big sister tried to tell him what was best for him, the more he turned away.\n\nPaige doesn't know what Bryce did to get kicked out of the house...just that she came home from the library to find her brother gone and her parents crying.\n\nDays turned to weeks, to months, to years.  Paige grew to become a talented bibliomancer, making a living as a storyteller reading at libraries across the five boroughs; and while her parents have remained silent about what happened with Bryce, Paige's obsession with finding him has only grown.  She will discover what happened to her brother... and no man or god is going to stand in her way.",
+    "tags": [
+      "Helpful",
+      "Protector",
+      "Booksmart"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Boho",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 69,
+    "name": "The Doorman",
+    "description": "He's proper, he's polite, but the humble Doorman of The Baroness Hotel is more than meets the eye.\n\nWhile he had only planned to experience life on this plane for a few weeks, The Doorman quickly discovered that the New York service industry was a great way to see the strange demands that please humans.",
+    "tags": [
+      "Disorienting",
+      "Map Control",
+      "Mind Games"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Skyrunner",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 71,
+    "name": "Swan",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 72,
+    "name": "Billy",
+    "description": "Billy is a white hot ball of rage, furious at the very notion of...something.  Maybe it’s the cops.  Maybe it’s magic regulations.  Maybe it’s the service at the gyro place downtown.  (Not the good one.  The other one.)\n\nDon't ask him how he got the goat head.",
+    "tags": [
+      "Punk",
+      "Chaotic",
+      "G.O.A.T."
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Druid",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 74,
+    "name": "Graf",
+    "description": "",
+    "tags": [
+      "Harasser",
+      "Nimble",
+      "Vexing"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Fortuna",
+    "description": "",
+    "tags": [
+      "Duelist",
+      "Isolator",
+      "Telekinetic"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Graves",
+    "description": "The daughter of high-power defense attorneys, Darcy Graves grew up in a home where every conversation was a debate, argument, or negotiation. It was exhausting. But while her parents were often too busy meeting with clients or working on cases to bond with her, the dead were always there to listen.\n\nGraves enjoyed her time in the cemetery.  It was a quiet place to calm her thoughts and talk through her problems...but one day her one-sided conversations started to change.\n\nIt began with a faint whisper.  A woman's voice that seemed to respond to Graves' complaints.  Intrigued, the teenager listened...and followed the voice's instructions until it guided her to a lead-lined box buried in Van Cortlandt Park.  But while most high school students would freak out if they were to unearth a severed lich hand, Graves was certainly not most teens.  The hand now free of its prison, the lich's voice grew stronger... It had spent years looking to find a student she could pass her knowledge to, and Graves was eager to learn.\n\nNow a fledgling necromancer, Darcy balances not only her homework at Blackmore Academy...but the demands of graveyard denizens, each of whom have their own unfinished business that they seek her aid in resolving.",
+    "tags": [
+      "Morbid",
+      "Area Denial",
+      "Necromancer"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Apollo",
+    "description": "A land of beauty, tradition and conflict; North Ixia is no stranger to brutal political violence. So when Apollo was told that it was for his own safety he was being sent to New York for school, he knew the situation was serious.\n\nAdjusting to life at Blackmore Academy didn’t come easy to Apollo. His school was supposed to be filled with The Cursed Apple’s best and brightest but all he saw, with few exceptions, was a sea of aggressive mediocrity. Electing not to waste his time with frivolous things like parties and dances, he instead put his energy on the piste, where he rigorously trains as captain of the Blackmore fencing team.\n\nHowever, at the end of the day Apollo does not fret too much on the tedium of life in New York. He knows that eventually the time will come when his father will call on him to come home and he will get to show that he is worthy of wielding his family's ancestral blade.",
+    "tags": [
+      "Finesse",
+      "Mobility",
+      "A Cut Above"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Airheart",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": 79,
+    "name": "Rem",
+    "description": "An accidental stowaway from the world of dreams, Rem has found himself stranded in the city that never sleeps.  Driven by his curious nature, Rem and his helpful friends have been seen wandering across the five boroughs in search of a way back home.\n\nSo if you ever find yourself dozing off while taking the Blue line home from work, maybe you’ve just had an encounter with one of the Cursed Apple’s newest denizens.",
+    "tags": [
+      "Helpful",
+      "Tiny",
+      "zZzzZ"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Silver",
+    "description": "Lilah Silver is a mess.  She drinks too much, she smokes too much, and the less is said about her personal life the better.   But despite Silver's flaws she has managed to carve out a career as a successful bounty hunter, and while she would like to think that her successes are solely because she has incredible intuition, the fact that she’s a werewolf doesn’t hurt.",
+    "tags": [
+      "Feral",
+      "Hot Mess",
+      "Transformation"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Celeste",
+    "description": "Even in a world of magic, some things are still rare and unusual. So what is a unicorn to do?  Announce her presence to the world and potentially have poachers looking to saw off her horn? Or hide in plain sight at a Coney Island Side Show where most folk would assume her appearance was just part of an act?\n\nOver the years \"The Dazzling Celeste\" has grown into one of the more popular attractions on Coney, and while the applause from a cheering audience is appreciated; what keeps her waking up in the morning is the found family she's made at work.\n\nKeruba the Mermaid.\n\nBlockhead Lenny.\n\nChickenwing.\n\nTed.\n\nThese were her people.  So when she discovered that one of her own sold part of their soul in order to cover a gambling debt, Celeste knew it was time to step out of the shadows and do whatever it takes to get it back.  Is revealing her power to The Patrons a risk?  Yes.  But that's tomorrow's problem... her family needs help today.",
+    "tags": [
+      "Performer",
+      "Disruptive",
+      "Dazzling"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Opera",
+    "description": "",
+    "tags": []
+  }
 ]
