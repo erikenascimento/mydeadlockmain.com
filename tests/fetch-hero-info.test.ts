@@ -5,7 +5,7 @@ import {
   fetchHeroInfo,
   normalizeHeroes,
   toHero,
-} from "./fetch-hero-info"
+} from "../scripts/fetch/fetch-hero-info"
 
 test("toHero maps and normalizes lore/tags", () => {
   const hero = toHero({
