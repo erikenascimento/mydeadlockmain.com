@@ -1,0 +1,32 @@
+export const heroScores = {
+    abrams: {
+        gunner: 1,
+        mystic: 2,
+        disabler: 5,
+        mobile: 5,
+        support: 0,
+        durable: 4,
+        initiator: 8,
+        opportunist: 0,
+    },
+    apollo: {
+        gunner: 0,
+        mystic: 8,
+        disabler: 1,
+        mobile: 10,
+        support: 0,
+        durable: 1,
+        initiator: 1,
+        opportunist: 0,
+    },
+}
+//   : {
+//     gunner: ,
+//     mystic: ,
+//     disabler: ,
+//     mobile: ,
+//     support: ,
+//     durable: ,
+//     initiator: ,
+//     opportunist: ,
+//   },
